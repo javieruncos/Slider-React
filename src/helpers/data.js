@@ -2,7 +2,7 @@ const people = [
     {
       id: 1,
       image: 'https://www.course-api.com/images/people/person-1.jpeg',
-      name: 'maria ferguson',
+      name: 'Maria Ferguson',
       title: 'office manager',
       quote:
         'Fingerstache umami squid, kinfolk subway tile selvage tumblr man braid viral kombucha gentrify fanny pack raclette pok pok mustache.',
@@ -10,7 +10,7 @@ const people = [
     {
       id: 2,
       image: 'https://www.course-api.com/images/people/person-4.jpeg',
-      name: 'john doe',
+      name: 'John Doe',
       title: 'regular guy',
       quote:
         'Gastropub sustainable tousled prism occupy. Viral XOXO roof party brunch actually, chambray listicle microdosing put a bird on it paleo subway tile squid umami.',
@@ -18,7 +18,7 @@ const people = [
     {
       id: 3,
       image: 'https://www.course-api.com/images/people/person-3.jpeg',
-      name: 'peter smith',
+      name: 'Peter Smith',
       title: 'product designer',
       quote:
         'Drinking vinegar polaroid street art echo park, actually semiotics next level butcher master cleanse hammock flexitarian ethical paleo.',
@@ -26,7 +26,7 @@ const people = [
     {
       id: 4,
       image: 'https://www.course-api.com/images/people/person-2.jpeg',
-      name: 'susan andersen',
+      name: 'Susan Andersen',
       title: 'the boss',
       quote:
         'Marfa af yr 3 wolf moon kogi, readymade distillery asymmetrical seitan kale chips fingerstache cloud bread mustache twee messenger bag. ',

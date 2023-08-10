@@ -1,12 +1,8 @@
 import { useEffect, useState } from 'react'
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css"
-import "bootstrap-icons/font/bootstrap-icons.json"
+import "bootstrap-icons/font/bootstrap-icons.css"
 import data from './helpers/data'
-import Imagen from './components/Imagen'
-
-
-
 
 
 function App() {
@@ -31,16 +27,15 @@ function App() {
     <>
       <section className='section'>
         <div className='title'>
-          <h2>
-            <span>/</span>slider
+          <h2 className='display-4 '>
+            Our Team
           </h2>
         </div>
-        <div className='contenedor-slider'>
-
+        <div className='contenedor-slider '>
           {
             people.map((persona, personIndex) => {
 
-              const { id, image } = persona;
+              const { id, image, name, title, quote } = persona;
 
               let position = 'nextSlide';
 
@@ -48,25 +43,36 @@ function App() {
                 position = 'activeSlide'
               }
 
-              if(
+              if (
                 personIndex === index - 1 ||
                 (index === 0 && personIndex === people.length - 1)
-              ){
+              ) {
                 position = 'lastSlide'
               }
 
               return (
-                <div className={position}>
-                  <img src={image} className={position} key={id} />
-                </div>
+                <article className={position}>
+                  <div className='d-flex flex-column justify-content-center align-items-center text-center'>
+                    <img src={image} key={id} />
+                    <h4 className='fw-bold'>{name}</h4>
+                    <p className="title">{title}</p>
+                    <div className='text-container '>
+                      <p className="title">{quote}</p>
+                    </div>
+                  </div>
+                </article>
               )
 
             })
           }
-        <div className='containerBtn'>
-          <button className=' left' onClick={() => setIndex(index - 1)}>anterior</button>
-          <button className=' right' onClick={() => setIndex(index + 1)}>next</button>
-        </div>
+          <div className='containerBtn'>
+            <button className=' left' onClick={() => setIndex(index - 1)}>
+            <i class="bi bi-arrow-left"></i>
+            </button>
+            <button className=' right' onClick={() => setIndex(index + 1)}>
+            <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
         </div>
 
       </section>
